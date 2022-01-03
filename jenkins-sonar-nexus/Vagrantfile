@@ -1,0 +1,70 @@
+Vagrant.configure("2") do |config|
+  config.hostmanager.enabled = true 
+  config.hostmanager.manage_host = true
+  
+
+### Jenkins vm  ####
+  config.vm.define "jenkins01" do |jenkins01|
+  jenkins01.vm.box = "ubuntu/focal64"
+  jenkins01.vm.hostname = "jenkins01"
+  jenkins01.vm.network "forwarded_port", guest: 80, host: 8080
+  jenkins01.vm.synced_folder ".", "/mnt/host_machine", create: true
+  jenkins01.vm.network "private_network", ip: "192.168.57.21"
+  jenkins01.vm.provider :virtualbox do |vb|
+      vb.name = "jenkins01"
+      vb.memory = "1536"
+  end
+  jenkins01.vm.provision "shell", path: "jenkins.sh"
+end
+
+### nexus vm ###
+   config.vm.define "nexus01" do |nexus01|
+    nexus01.vm.box = "geerlingguy/centos7"
+    nexus01.vm.hostname = "nexus01"
+    nexus01.vm.synced_folder ".", "/mnt/host_machine", create: true
+    nexus01.vm.network "private_network", ip: "192.168.57.22"
+    nexus01.vm.provision "shell", path: "nexus.sh"
+    nexus01.vm.provider "virtualbox" do |vb|
+     vb.name = "nexus01"
+     vb.memory = "2560"
+    end
+end
+
+### Sonarqube vm  ####
+  config.vm.define "sonar01" do |sonar01|
+  sonar01.vm.box = "ubuntu/focal64"
+  sonar01.vm.hostname = "sonar01"
+  sonar01.vm.synced_folder ".", "/mnt/host_machine", create: true
+  sonar01.vm.network "private_network", ip: "192.168.57.23"
+  sonar01.vm.provider :virtualbox do |vb|
+      vb.name = "sonar01"
+      vb.memory = "2560"
+  end
+  sonar01.vm.provision "shell", path: "sonarqube.sh"
+end
+
+
+### xld docker  ####
+config.vm.define "xld01" do |xld01|
+  xld01.vm.box = "ubuntu/xenial64"
+  xld01.vm.hostname = "xld01"
+  xld01.vm.synced_folder ".", "/mnt/host_machine", create: true
+  xld01.vm.network "private_network", ip: "192.168.57.24"
+  xld01.vm.provider :virtualbox do |vb|
+    vb.name = "xld01"
+    vb.memory = "2024"
+  end
+
+  xld01.vm.provision "docker" do |xldctn01|
+    xldctn01.run "xebialabs/xl-deploy:10.2",
+        args: " -p 4516:4516 --hostname 'xld01' --name 'xld01' -e 'ADMIN_PASSWORD=pass' -e 'ACCEPT_EULA=Y' "
+    end
+  
+  xld01.vm.provision "shell", inline: "echo Sleep for 150s;sleep 150; docker logs xld01 2>/dev/null | grep 'point your browser to' " 
+  xld01.vm.provision "shell", path: "xld.sh"
+
+end
+
+
+
+end
