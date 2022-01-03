@@ -1,0 +1,4 @@
+FROM xebialabs/xl-deploy:10.2
+ARG ADMIN_PASSWORD=pass
+ARG ACCEPT_EULA=Y
+EXPOSE 4516

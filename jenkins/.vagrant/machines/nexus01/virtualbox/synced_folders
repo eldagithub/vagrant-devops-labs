@@ -1,0 +1,1 @@
+{"virtualbox":{"/mnt/host_machine":{"create":true,"guestpath":"/mnt/host_machine","hostpath":"/Users/elmos/OneDrive/TECH/github/devops/vagrant/jenkins","disabled":false,"__vagrantfile":true}}}

@@ -1,0 +1,4 @@
+./tomcat-rmq-mc-postg/.vagrant
+./old/Manual_provisioning/.vagrant
+./jenkins/.vagrant
+./kubernetes/kubeadm/.vagrant
