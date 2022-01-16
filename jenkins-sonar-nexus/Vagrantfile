@@ -52,12 +52,14 @@ config.vm.define "xld01" do |xld01|
   xld01.vm.network "private_network", ip: "192.168.57.24"
   xld01.vm.provider :virtualbox do |vb|
     vb.name = "xld01"
-    vb.memory = "2024"
+    vb.memory = "3060"
   end
 
   xld01.vm.provision "docker" do |xldctn01|
     xldctn01.run "xebialabs/xl-deploy:10.2",
         args: " -p 4516:4516 --hostname 'xld01' --name 'xld01' -e 'ADMIN_PASSWORD=pass' -e 'ACCEPT_EULA=Y' "
+    xldctn01.run "xebialabs/xl-release:10.2",
+        args: " -p 5516:5516 --hostname 'xld01' --name 'xlr01' -e 'ADMIN_PASSWORD=pass' -e 'ACCEPT_EULA=Y' "
     end
   
   xld01.vm.provision "shell", inline: "echo Sleep for 150s;sleep 150; docker logs xld01 2>/dev/null | grep 'point your browser to' " 
