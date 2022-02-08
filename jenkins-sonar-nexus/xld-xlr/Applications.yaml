@@ -1,0 +1,65 @@
+---
+apiVersion: xl-deploy/v1
+kind: Applications
+spec:
+- directory: Applications/QORESVC
+  children:
+  - directory: PMSA
+    children:
+    - directory: JSF
+      children:
+      - name: jsf-war
+        type: udm.Application
+        lastVersion: jsf-v1.0.2
+        children:
+        - name: jsf-v1.0.0
+          type: udm.DeploymentPackage
+          orchestrator:
+          - sequential-by-deployment-group
+          deployables:
+          - name: jsf-cmd
+            type: cmd.Command
+            tags:
+            - pmsa
+            commandLine: |-
+              echo INSALTIONnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+              uname  -a
+              date
+            undoCommandLine: echo undooooooooooooooooooooooooooooooooooooooo
+        - name: jsf-v1.0.2
+          type: udm.DeploymentPackage
+          deployables:
+          - name: jsf-cmd
+            type: cmd.Command
+            tags:
+            - pmsa
+            commandLine: |-
+              echo INSALTIONnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+              uname  -a
+              date
+            undoCommandLine: echo undooooooooooooooooooooooooooooooooooooooo
+    - directory: APP1
+      children:
+      - name: app1-war
+        type: udm.Application
+        lastVersion: app1-v1.0.2
+        pipeline: Configuration/QORESVC/qsvc-pipeline
+        children:
+        - name: app1-v1.0.0
+          type: udm.DeploymentPackage
+          deployables:
+          - name: app1-cmd
+            type: cmd.Command
+            tags:
+            - pmsa
+            commandLine: date
+            undoCommandLine: echo undooooooooooooooooooooooooooooooooooooooo
+        - name: app1-v1.0.2
+          type: udm.DeploymentPackage
+          deployables:
+          - name: app1-cmd
+            type: cmd.Command
+            tags:
+            - pmsa
+            commandLine: uname
+            undoCommandLine: echo undooooooooooooooooooooooooooooooooooooooo

@@ -1,0 +1,19 @@
+---
+apiVersion: xl-deploy/v1
+kind: Environments
+spec:
+- directory: Environments/QORESVC
+  children:
+  - directory: SIM
+    children:
+    - name: PMSA-SIM-ENV
+      type: udm.Environment
+      members:
+      - Infrastructure/QORESVC/SIM/SIM-PMSA-host-xld01
+  - directory: DEV
+    children:
+    - name: PMSA-DEV-ENV
+      type: udm.Environment
+      members:
+      - Infrastructure/QORESVC/DEV/PMSA-host-xld01
+      - Infrastructure/QORESVC/DEV2/Dev2-PMSA-host-xld01

@@ -1,0 +1,500 @@
+ cd /Users/elmos/work/tmp/vscode-java/HelloWorld ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:63129 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_ejidghf7fhn9gqk85l9ehodk2.argfile main.java.com.mos.az.kv.App 
+java -cp  "target/*"  App
+mvn clean
+mvn package
+ll lib
+cp lib/azure-* target/
+java -cp  "target/*"  App
+jar lib/log4j-over-slf4j-2.0.0-alpha1.jar 
+jar tvf lib/log4j-over-slf4j-2.0.0-alpha1.jar 
+rm lib/log4j-over-slf4j-2.0.0-alpha1.jar 
+jar tvf lib/slf4j-api-1.7.30.jar 
+cp lib/slf4j-api-1.7.30.jar target/
+java -cp  "target/*"  App
+java -cp  "target/*"  App
+java -cp  "target/*:/Users/elmos/.m2/repository/*"  App
+java -cp  "target/*:/Users/elmos/.m2/repository/*"  App
+history |grep clean
+mvn clean dependency:copy-dependencies
+ll
+cd target/
+cd dependency/
+ll
+cd ../
+ll
+cd ../
+ll*
+mvn package
+cd target/
+ll
+pwd
+cd ../
+java -cp "target/azureKV-1.0-SNAPSHOT.jar:target/dependency/*" App 
+history
+mvn package
+java -cp "target/azureKV-1.0-SNAPSHOT.jar:target/dependency/*" App 
+ll target/dependency/
+ll lib
+mvn clean dependency:copy-dependencies
+mvn clean dependency:copy-dependencies
+java -cp "target/azureKV-1.0-SNAPSHOT.jar:target/dependency/*" App 
+mvn package
+java -cp "target/azureKV-1.0-SNAPSHOT.jar:target/dependency/*" App 
+mvn clean
+pwd
+ll
+cd ../
+ll
+cd .../
+cd ../
+mv vscode-java/ azure-kv-acces
+mv azure-kv-acces/ ../../OneDrive/TECH/github/
+gogit
+cd azure-kv-acces/
+ll
+mv HelloWorld java-demo
+cd java-demo/
+ll
+find 1.0.0/
+rm -rf 1.0.0/
+ll
+ll
+mv lib/ ../
+ll
+mv src/mvn.sh ../
+ll
+mv ../mvn.sh .
+ll
+find src/
+ll
+cat mvn.sh 
+export KEY_VAULT_NAME="terraform-refmos-kv"
+vi mvn.sh 
+cat mvn.sh 
+mvn clean dependency:copy-dependencies package
+java -cp "target/azureKV-1.0-SNAPSHOT.jar:target/dependency/*" App
+ll
+pwd
+cd ../
+ll
+rm -rf lib .DS_Store 
+ll
+mkdir python-demo
+cd python-demo/
+ll
+cd ../
+ll
+code .
+mvn archetype:generate -DgroupId=com.mos.az.kv
+mvn run
+mvn build
+pwd
+ll
+cd 1.0.0/
+mvn build
+mvn
+cat pom.xml 
+mvn build
+man mvn
+mvn -h
+mvn run
+mvn package
+ll
+find target/
+pwd
+ll
+cd ../
+ll
+ll 1.0.0/
+find .
+mv 1.0.0/* .
+ll
+ll 1.0.0/
+mv 1.0.0/src/* src/
+ll
+mv HelloWorld.jar lib
+ll
+ll
+clear
+rm -rf target/
+ll
+mvn  package
+mvn  package
+jar tvf target/azureKV-1.0-SNAPSHOT.jar 
+/usr/local/opt/python/bin/python3.7 /Users/elmos/.vscode/extensions/ms-python.python-2021.2.582707922/pythonFiles/pyvsc-run-isolated.py pip install -U pylint --user
+python kv_secrets.py
+pip install azure-keyvault-secrets azure-identity
+pip upate
+pip update
+/System/Library/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python -m pip install --upgrade pip
+pip install azure-keyvault-secrets azure-identity
+python kv_secrets.py
+pip install azure-keyvault-secrets azure-identity
+clear
+pip install azure-keyvault-secrets azure-identity
+python -m pip --version
+python3 kv_secrets.py 
+exit
+python3 kv_secrets.py 
+which python3
+python3 kv_secrets.py 
+env
+code .
+python3 kv_secrets.py 
+az account shox
+az account show
+az logout
+az account show
+python3 kv_secrets.py 
+export KEY_VAULT_NAME="terraform-refmos-kv"
+az login
+python3 kv_secrets.py
+cd ../
+cd java-demo/ 
+code .
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:53573 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:53753 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:53810 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+pwd
+cd target/dependency/
+pwd
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54450 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/* com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54561 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp \'/Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/*\' com.mos.az.kv.App 
+clear
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54739 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp \"/Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/*\" com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54786 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp "" com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54855 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ll
+ll target/
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:54993 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_9gadr21bnypuqyfoqvp3la2ev.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55027 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_9gadr21bnypuqyfoqvp3la2ev.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55111 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_9gadr21bnypuqyfoqvp3la2ev.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55165 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55213 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55253 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/* com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55488 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55543 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:55595 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/* App 
+ls -alrt
+cd .settings/
+ll
+cd ../
+vi .classpath 
+ll loib
+ll lib
+mkdir lib
+ll
+cp target/dependency/* lib/
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:56282 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/* App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:56383 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:56403 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dwb0qzrgvi98rf0eix3bk389n.argfile com.mos.az.kv.App 
+vi .classpath 
+pwd
+vi .classpath 
+ll lib/*
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:56909 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_dsqi0tmmwdl4oi83cie9oy1bt.argfile App 
+clear
+ll ../APP2/
+cd ../APP2/
+ll
+ls -lrt
+find  ?
+find .
+cp .vscode/launch.json ../App/.vscode/
+cp ../App/.vscode/settings.json .vscode/
+code .
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/App ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+az account show
+cd ../
+find ?.
+find .
+cat ./APP2/mvn.sh
+echo $KEY_VAULT_NAME
+export KEY_VAULT_NAME="terraform-refmos-kv"
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/App ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+echo $KEY_VAULT_NAME
+export KEY_VAULT_NAME="terraform-refmos-kv"
+echo $KEY_VAULT_NAME
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/App ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+/usr/bin/env echo $KEY_VAULT_NAME
+exit
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=n,suspend=y,address=localhost:57592 -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2 ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile com.mos.az.kv.App 
+code ../App/
+ll /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/target/dependency/*.jar
+ll /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2/target/dependency/*.jar
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2 ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile com.mos.az.kv.App 
+ll
+mvn package
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2 ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile com.mos.az.kv.App 
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2 ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile App 
+export KEY_VAULT_NAME="terraform-refmos-kv"
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/APP2 ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_bmvk5ks8m6hb0ahb3bnn2kvep.argfile App 
+echo KEY_VAULT_NAME
+echo $KEY_VAULT_NAME
+export KEY_VAULT_NAME="terraform-refmos-kv"
+echo $KEY_VAULT_NAME
+clear
+ /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+export KEY_VAULT_NAME="terraform-refmos-kv"
+ cd /Users/elmos/OneDrive/TECH/github/azure-kv-acces/java-demo/App ; /usr/bin/env /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/bin/java -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 @/var/folders/2l/fhw4fpkd0kjb5xxhl47478bc0000gn/T/cp_5db1qxuwj1v3egy44518agsp4.argfile App 
+cd work/T
+ll
+cd OneDrive/
+cd TECH/
+grep -r mvn *
+grep -rl mvn *
+cd
+find . -name "
+find . -name "*slf4j*" -ls
+cp  ./.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar work/tmp/vscode-java/HelloWorld/lib/
+cd  ./.m2
+ls -lrt
+cd repository/
+ls -lrt
+find . -name "*Publisher*"
+cd org
+ll
+cd reactivestreams/
+ll
+cd reactive-streams/
+ll
+cd 1.0.3/
+ll
+cp reactive-streams-1.0.3.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/lib/
+cp reactive-streams-1.0.3.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/target/
+ll
+ll
+ll
+cd ../
+ll
+cd ../
+pwd
+pwd
+cd .././
+cd ../com
+mm
+ll
+cd microsoft/
+ll
+find . -name "*.jar"
+find . -name "*.jar" -ls
+cd ./azure/msal4j/1.8.0/msal4j-1.8.0.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/lib
+cp ./azure/msal4j/1.8.0/msal4j-1.8.0.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/lib
+cp ./azure/msal4j/1.8.0/msal4j-1.8.0.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/target/
+cp ./azure/msal4j-persistence-extension/1.0.0/msal4j-persistence-extension-1.0.0.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/lib
+cp ./azure/msal4j-persistence-extension/1.0.0/msal4j-persistence-extension-1.0.0.jar /Users/elmos/work/tmp/vscode-java/HelloWorld/target/
+pwd
+cd
+find . -name "msal4j-1.8.0.jar" -ls
+cd -
+cd ../
+ll
+pwd
+cd ../
+clear
+find . -name "*.jar" -ls
+find . -name "*.jar" -ls|grep " 26 fév"
+clear
+python -m pip --version
+python -m pip install -U pip
+python --version
+python3 --version
+python3 -m pip --version
+python3 -m pip install -U pip
+pip -version
+pip --version
+pip install azure-keyvault-secrets azure-identity
+cd
+cd OneDrive/
+cd TECH/github/azure-kv-acces/python-demo/
+python3 kv_secrets.py 
+export KEY_VAULT_NAME="terraform-refmos-kv"
+python3 kv_secrets.py 
+az login
+python3 kv_secrets.py 
+az account get-access-token
+python3 kv_secrets.py 
+clear
+python3 kv_secrets.py 
+cd /usr/local/lib/python3.7/site-packages/azure/
+ll
+cd identity/
+ll
+grep -r DefaultAzureCredential *
+vi _credentials/default.py
+cd -
+cd
+gogit
+cd azure-kv-acces/python-demo/
+python3 kv_secrets.py 
+env
+which python 3
+which python3
+code 
+code ,
+code ?
+ll
+cd .
+code .
+ VBoxManage    startvm "Debian_10.6.0_VB_LinuxVMImages.com"  --type headless
+cd Dropbox/
+ll
+du -hs Dropbox/
+cd Dropbox/
+du -hs *
+cd Ro
+cd ROYAL\ KIDS\ IVRY/
+cd ??
+cd ..
+cd Lire/
+du -hs * |sort -n
+cd ..
+du -hs * |sort -n
+cd work
+du -hs * |sort -n
+cd FINCORPIT/
+du -hs * |sort -n
+cd 99-Autres/
+du -hs * |sort -n
+cd Projets/
+du -hs * |sort -n
+cd AurisGestion/
+du -hs * |sort -n
+cd Docs/
+du -hs * |sort -n
+pwd
+pwd
+cd ..
+cd ../../
+cd ../../
+pwd
+cd 
+cd Dropbox/
+du -hs * |sort -n
+du -hs *
+cd ~/Library/KeyBindings/
+cd
+cd Library/
+ll
+cd Keyboard
+ll
+ VBoxManage    startvm "Debian_10.6.0_VB_LinuxVMImages.com"  --type headless
+ VBoxManage    startvm "CentOS_8.2.2004_Minimal_LinuxVMImages.com"  --type headless
+ VBoxManage    startvm "CentOS_8.2.2004_Minimal_LinuxVMImages.com"  --type headless
+ VBoxManage    startvm "Debian_10.6.0_VB_LinuxVMImages.com"  --type headless
+which keytool
+keytool -v
+keytool -h
+keytool -showinfo
+keytool 
+VBoxManage    startvm "Debian_10.6.0_VB_LinuxVMImages.com"  --type headless
+ping debianbox
+ping salt,box
+ping salt.box
+ping debianbox
+ping 198,162,1,12
+ping 198.168.1.12
+ping 198.168.1.52
+ping centosbox
+ping 198.168.1.15
+ping 198.168.1.162
+docker run --name repo alpine/git clone https://github.com/docker/getting-started.git
+docker cp repo:/git/getting-started/ .
+ll
+ll getting-started/
+cd getting-started 
+ docker build -t docker101tutorial . 
+docker run -d -p 80:80 --name docker-tutorial docker101tutorial
+docker ps 
+docker ps stop docker-tutorial
+docker stop docker-tutorial
+docker ps 
+docker ps -a
+docker rm docker-tutorial
+docker run -d -p 8083:80 --name docker-tutorial docker101tutorial
+sudo vi /etc/password
+ping centosboxpro
+grep centosboxpro /etc/hosts
+sudo vi /etc/password
+cat /etc/password
+sudo vi /etc/hosts
+ping centosboxpro
+brew update
+brew 
+brew update
+brew upgrade
+brew install virtualbox
+brew install vagrant
+anual_provisio
+vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-vbguest
+ssh vagrant@db01
+gogit
+cd devops
+ll
+cd vprofile-project/
+git remote -v
+ll
+cd vagrant/
+ll
+cd Manual_provisioning/
+ll
+cd ..
+ll
+cd ../
+ll
+cd userdata/
+ll
+cd ..
+ll
+find vagrant/
+find . -name Manual_provisio
+find . -name Manual_provisioning
+ll
+git branch
+git status
+git add .
+git commit -m "local commit"
+git branch
+git checkout local-setup
+ll
+du -hs vagrant/
+cp -r vagrant vagrant.imac
+cd vagrant.imac/
+ll
+cd Manual_provisioning/
+ll
+vagrant up
+vagrant destroy
+cd ../
+ll
+cd Automated_provisioning/
+ll
+vagrant up
+vagrant
+ll
+cd ../
+ll
+du -hs *
+du -hs .git
+ll
+xl appl -f xlr-template.yaml 
+xl apply -f xlr-template.yaml 
+xl apply -f xlr-QORESVC2.yaml 
+xl apply -f xlr-QORESVC2.yaml 
+pwd
+xl generate xl-release -p  QORESVC2 -o -f xlr-QORESVC2-new.yaml 
+xl generate -s xl-release -f users.yaml -u
+xl generate xl-release -f users.yaml -u 
+xl generate xl-release -f roles.yaml -r 
+history
+history | grep yaml
+vi export.sh 
+history -w| grep yaml
+history -w 
+history -h
+history -w hist

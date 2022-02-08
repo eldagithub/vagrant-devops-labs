@@ -1,0 +1,44 @@
+# Exported from:        http://localhost:5516/
+# Release version:      10.2.9
+# Date created:         Sat Feb 05 11:22:36 UTC 2022
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: QORESVC2
+spec:
+- template: release-war
+  scheduledStartDate: 2022-02-05T08:00:00Z
+  phases:
+  - phase: build
+    tasks:
+    - name: build
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+      variables:
+      - war-app1-ver
+    - name: getVersion
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+      variables:
+      - war-app1-ver
+    color: '#0079BC'
+  - phase: DEV
+    color: '#0079BC'
+    tasks:
+    - name: Deploy app1
+      type: xldeploy.Deploy
+      server: xld01
+      deploymentPackage: Applications/QORESVC/PMSA/APP1/app1-war/app1-v1.0.0
+      deploymentEnvironment: Environments/QORESVC/DEV/PMSA-DEV-ENV
+  - phase: SIM
+    color: '#0079BC'
+  - phase: UAT
+    color: '#0079BC'
+  - phase: EXP
+    color: '#0079BC'
+  variables:
+  - type: xlrelease.StringVariable
+    key: war-app1-ver
+  riskProfile: Default risk profile

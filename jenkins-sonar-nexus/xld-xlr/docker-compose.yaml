@@ -1,0 +1,67 @@
+version: '3'
+services:
+  xl-release:
+    container_name: xl-release
+    hostname: xld01
+    image: xebialabs/xl-release:10.2
+    ports:
+      - "5516:5516"
+    depends_on:
+      - postgres
+    environment:
+      ACCEPT_EULA: "Y"
+      ADMIN_PASSWORD: "pass"
+      XL_CLUSTER_MODE: "default"
+      XL_DB_URL: "jdbc:postgresql://postgres:5432/xlrelease"
+      XL_DB_USERNAME: "xlrelease"
+      XL_DB_PASSWORD: "xlrelease"
+      XL_REPORT_DB_URL: "jdbc:postgresql://postgres:5432/xlarchive"
+      XL_REPORT_DB_USERNAME: "xlarchive"
+      XL_REPORT_DB_PASSWORD: "xlarchive"
+    volumes:
+      -  ${HOME}/xebialabs/xl-release-server/conf:/opt/xebialabs/xl-release-server/conf
+      -   ${HOME}/xebialabs/xl-release-server/repository:/opt/xebialabs/xl-release-server/repository
+      -  ${HOME}/xebialabs/xl-release-server/archive:/opt/xebialabs/xl-release-server/archive
+      -  ${HOME}/xebialabs/xl-release-server/reports:/opt/xebialabs/xl-release-server/reports
+      -  ${HOME}/xebialabs/xl-release-server/ext:/opt/xebialabs/xl-release-server/ext
+      -  ${HOME}/xebialabs/xl-release-server/hotfix:/opt/xebialabs/xl-release-server/hotfix
+      -  ${HOME}/xebialabs/xl-release-server/plugins:/opt/xebialabs/xl-release-server/plugins
+      -  ${HOME}/xebialabs/db-libs:/opt/xebialabs/db-libs  
+  xl-deploy:
+    image: xebialabs/xl-deploy:10.2
+    hostname: xld01
+    container_name: xl-deploy
+    ports:
+      - "4516:4516"
+    depends_on:
+      - postgres
+    volumes:
+      - ${HOME}/xebialabs/xl-deploy-server/conf:/opt/xebialabs/xl-deploy-server/conf
+      - ${HOME}/xebialabs/xl-deploy-server/ext:/opt/xebialabs/xl-deploy-server/ext
+      - ${HOME}/xebialabs/xl-deploy-server/hotfix/lib:/opt/xebialabs/xl-deploy-server/hotfix/lib
+      - ${HOME}/xebialabs/xl-deploy-server/hotfix/plugins:/opt/xebialabs/xl-deploy-server/hotfix/plugins
+      - ${HOME}/xebialabs/xl-deploy-server/plugins:/opt/xebialabs/xl-deploy-server/plugins
+      - ${HOME}/xebialabs/xl-deploy-server/repository:/opt/xebialabs/xl-deploy-server/repository
+      - ${HOME}/xebialabs/db-libs:/opt/xebialabs/db-libs
+    environment:
+      ADMIN_PASSWORD: "pass"
+      ACCEPT_EULA: "Y"
+      XLD_IN_PROCESS: "true"
+      XLD_TASK_QUEUE_IN_PROCESS_MAX_DISK_USAGE: 100
+      XL_CLUSTER_MODE: "default"
+      XL_DB_URL: "jdbc:postgresql://postgres:5432/xldeploy"
+      XL_DB_USERNAME: "xldeploy"
+      XL_DB_PASSWORD: "xldeploy"
+  postgres:
+    container_name: db-postgres
+    hostname: xld01
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_MULTIPLE_DATABASE="xlrelease","xldeploy","xlarchive"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=demo
+    command: postgres
+    volumes:
+      - ${HOME}/xebialabs/postgress/:/var/lib/postgresql/data

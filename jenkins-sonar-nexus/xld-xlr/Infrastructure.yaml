@@ -1,0 +1,28 @@
+---
+apiVersion: xl-deploy/v1
+kind: Infrastructure
+spec:
+- directory: Infrastructure/QORESVC
+  children:
+  - directory: SIM
+    children:
+    - name: SIM-PMSA-host-xld01
+      type: overthere.SshHost
+      tags:
+      - pmsa
+      os: UNIX
+      connectionType: SCP
+      address: 192.168.57.24
+      username: vagrant
+      privateKeyFile: /opt/xebialabs/xl-deploy-server/id_rsa
+  - directory: DEV
+    children:
+    - name: PMSA-host-xld01
+      type: overthere.SshHost
+      tags:
+      - pmsa
+      os: UNIX
+      connectionType: SCP
+      address: 192.168.57.24
+      username: vagrant
+      privateKeyFile: /opt/xebialabs/xl-deploy-server/id_rsa

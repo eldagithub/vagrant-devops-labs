@@ -52,7 +52,7 @@ config.vm.define "xld01" do |xld01|
   xld01.vm.network "private_network", ip: "192.168.57.24"
   xld01.vm.provider :virtualbox do |vb|
     vb.name = "xld01"
-    vb.memory = "3060"
+    vb.memory = "4608"
   end
 
   xld01.vm.provision "docker" do |xldctn01|

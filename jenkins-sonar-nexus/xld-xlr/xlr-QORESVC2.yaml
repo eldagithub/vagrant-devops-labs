@@ -1,0 +1,48 @@
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: QORESVC2
+spec:
+- template: release-war-parallel-two
+  phases:
+  - phase: build
+    tasks:
+    - name: build
+      type: xlrelease.UserInputTask
+      description: Please enter the required information below.
+      variables:
+      - war-app1-ver
+    color: '#0079BC'
+  - phase: DEV
+    tasks:
+    - name: WAR-PARALLEL
+      type: xlrelease.ParallelGroup
+      tasks:
+      - name: Deploy JSF
+        type: xldeploy.Deploy
+        server: xld01
+        deploymentApplication: Applications/QORESVC/PMSA/JSF/jsf-war
+        deploymentVersion: "${war-jsf-ver}"
+        deploymentPackage: "Applications/QORESVC/PMSA/JSF/jsf-war/${war-jsf-ver}"
+        deploymentEnvironment: Environments/QORESVC/DEV/PMSA-DEV-ENV
+      - name: Deploy APP1
+        type: xldeploy.Deploy
+        server: xld01
+        deploymentApplication: Applications/QORESVC/PMSA/APP1/app1-war
+        deploymentVersion: "${war-app1-ver}"
+        deploymentPackage: "Applications/QORESVC/PMSA/APP1/app1-war/${war-app1-ver}"
+        deploymentEnvironment: Environments/QORESVC/DEV/PMSA-DEV-ENV
+    color: '#0079BC'
+  - phase: SIM
+    color: '#0079BC'
+  - phase: UAT
+    color: '#0079BC'
+  - phase: EXP
+    color: '#0079BC'
+  variables:
+  - type: xlrelease.StringVariable
+    key: war-app1-ver
+  - type: xlrelease.StringVariable
+    key: war-jsf-ver
+  riskProfile: Default risk profile

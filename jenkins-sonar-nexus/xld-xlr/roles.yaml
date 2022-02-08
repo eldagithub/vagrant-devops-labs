@@ -1,0 +1,13 @@
+---
+apiVersion: xl-release/v1
+kind: Roles
+spec:
+- name: DEV
+  principals:
+  - dev
+- name: OPS
+  principals:
+  - ops
+- name: REL
+  principals:
+  - rel

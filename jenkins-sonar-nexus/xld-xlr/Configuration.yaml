@@ -1,0 +1,11 @@
+---
+apiVersion: xl-deploy/v1
+kind: Configuration
+spec:
+- directory: Configuration/QORESVC
+  children:
+  - name: qsvc-pipeline
+    type: release.DeploymentPipeline
+    pipeline:
+    - Environments/QORESVC/DEV/PMSA-DEV-ENV
+    - Environments/QORESVC/SIM/PMSA-SIM-ENV

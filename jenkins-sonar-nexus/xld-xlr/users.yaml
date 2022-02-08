@@ -1,0 +1,19 @@
+---
+apiVersion: xl-release/v1
+kind: Users
+spec:
+- username: dev
+  password: Passpass2021
+  name: dev
+  enabled: true
+  firstDayOfWeek: Sun
+- username: ops
+  password: Passpass2021
+  name: ops
+  enabled: true
+  firstDayOfWeek: Sun
+- username: rel
+  password: Passpass2021
+  name: rel
+  enabled: true
+  firstDayOfWeek: Sun
